@@ -20,8 +20,16 @@ function App() {
       </header>
       <Switch>
         <Route path="/" exact component={Home} />
+        {/* VERSION 1 */}
         <Route path="/teams/:id" component={Team} />
-        <Route path="/teams" component={Teams} />
+
+        {/* VERSION 2 */}
+        {/* <Route path="/teams/:id">
+          <Team />
+        </Route> */}
+        <Route path="/teams">
+          <Teams />
+        </Route>
         <Route path="/players/:id" component={Player} />
         <Route path="/players" component={Players} />
       </Switch>
